@@ -1,9 +1,9 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 set nu
-set mouse=a
+"set mouse=a
 set undofile
-set undodir=~/.vim/undodir
+set undodir=~/.vim/undofile
 set rtp+=~/.vim/bundle/Vundle.vim
 
 " git clone https://github.com/VundleVim/Vundle.vim.git
@@ -12,9 +12,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'itchyny/lightline.vim'
-Plugin 'jsit/plum'
-Plugin 'AlessandroYorba/Sierra'
-Plugin 'w0ng/vim-hybrid'
+Plugin 'rakr/vim-one'
 call vundle#end()
 
 filetype plugin indent on
@@ -26,13 +24,13 @@ inoremap <Space-Tab> <esc>la
 inoremap {<CR> {<CR>}<Esc>ko
 
 "set rtp+=~/Library/Python/2.7/lib/python/site-packages
-set tabstop=2 softtabstop=0 noexpandtab shiftwidth=2
-set autoindent
-let g:plum_set_bg_at_start = 0
-set smartindent
+set tabstop=4 softtabstop=0 noexpandtab shiftwidth=4
+set autoindent smartindent
 " " Always show statusline
 set laststatus=2
 " " Use 256 colours (Use this setting only if your terminal supports 256
 "set t_Co=256
 syntax on
-colorscheme plum
+
+colorscheme one
+hi Normal ctermbg=none
